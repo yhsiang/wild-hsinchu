@@ -1,1 +1,15 @@
 node_modules
+app/assets/components
+*.py[cod]
+*~
+*.swp
+
+.DS_Store
+.sass-cache
+node_modules
+temp
+build
+dist
+
+locals.json
+npm-debug.log
