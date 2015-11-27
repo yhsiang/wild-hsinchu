@@ -1,15 +1,27 @@
-node_modules
-app/assets/components
-*.py[cod]
-*~
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
 *.swp
+*.zip
+*.vi
+*~
 
+# OS folders
 .DS_Store
-.sass-cache
-node_modules
-temp
-build
-dist
+._*
+Thumbs.db
 
-locals.json
-npm-debug.log
+# Folders to ignore
+.hg
+.svn
+.CVS
+.idea
+
+node_modules
+dist
+.tmp
+app/bower_components
