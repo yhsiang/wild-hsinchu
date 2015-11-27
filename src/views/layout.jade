@@ -1,8 +1,11 @@
 doctype html
 html(lang="en")
   head
-    title Yo! Gulp Less Jade
+    title Hello Static Page
     link(rel='stylesheet', href='/styles/main.css')
   body
-    block content
+    include nav
+    .content.container
+      block content
+    include footer
 
