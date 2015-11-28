@@ -1,27 +1,30 @@
 // Navbar
 
-#nav
-  nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
-    .container
+nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+  .container
+    .logo
       a.navbar-logo.navbar-brand(href='/#')
-        img(alt='', src='imgs/logo.png')
-      .navbar-header
-        button.navbar-toggle
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-      .collapse.navbar-collapse
-        ul.nav.navbar-nav
-          li
-            a(href='/calendar.html') 活動月曆
-          li
-            a(href='/intro.html') 市府介紹
-          li
-            a(href='/sos.html') 1999
-          li
-            a(href='/maps.html') 風城地圖
-          li
-            a(href='/links.html') 各站連結
-
+        img(alt='', src='images/logo.png')
+    .navbar-header
+      button.navbar-toggle
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li
+          a(href='/calendar.html') 活動月曆
+        li
+          a(href='/intro.html') 市府介紹
+        li
+          a(href='/maps.html') 風城地圖
+        li
+          a(href='/links.html') 各站連結
+        li
+          a(href='/sos.html') 1999
+        li.search
+          input(placeholder="搜尋")
+          span.icon
+            i.fa.fa-search
 // Navbar End

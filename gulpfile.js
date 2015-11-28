@@ -53,6 +53,10 @@ gulp.task('images', function() {
     .pipe(gulp.dest('build/images'));
 });
 
+gulp.task('fonts', function() {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('build/fonts'));
+});
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -86,7 +90,7 @@ gulp.task('clean', function(cb) {
 });
 
 
-gulp.task('build', ['styles', 'views', 'images']);
+gulp.task('build', ['styles', 'views', 'images', 'fonts']);
 
 
 gulp.task('default', ['clean'], function() {
