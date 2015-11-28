@@ -1,10 +1,10 @@
 'use strict';
 
 var gulp = require('gulp');
-
+var gutil = require("gulp-util");
 // Load plugins
 var $ = require('gulp-load-plugins')();
-
+var webpack = require("webpack");
 
 gulp.task('styles', function() {
   var browsers = [
@@ -65,6 +65,7 @@ gulp.task('watch', ['build'], function() {
   gulp.watch('src/images/**/*', ['images']);
   gulp.watch('src/**/*.jade', ['views']);
   gulp.watch('src/js/*.js', ['scripts']);
+  gulp.watch('src/components/*.jsx', ['webpack']);
 
   var connect = require('connect');
   var serveStatic = require('serve-static');
@@ -81,6 +82,16 @@ gulp.task('selfcheck', function() {
     .pipe($.jshint.reporter('fail'));
 });
 
+gulp.task("webpack", function(callback) {
+    // run webpack
+    webpack(require('./webpack.config'), function(err, stats) {
+        if(err) throw new gutil.PluginError("webpack", err);
+        gutil.log("[webpack]", stats.toString({
+            // output options
+        }));
+        callback();
+    });
+});
 
 gulp.task('clean', function(cb) {
   var del = require('del');
@@ -88,7 +99,7 @@ gulp.task('clean', function(cb) {
 });
 
 
-gulp.task('build', ['styles', 'views', 'images', 'fonts', 'scripts']);
+gulp.task('build', ['styles', 'views', 'images', 'fonts', 'scripts', 'webpack']);
 
 
 gulp.task('default', ['clean'], function() {
