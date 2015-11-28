@@ -454,31 +454,37 @@ nav {
     .tabs {
         margin-top: 30px;
         margin-bottom: 30px;
-        li {
-            font-size: @title-font-size;
-            background-color: @theme-yellow-inactive;
-            a {
-                color: grey;
-                border-color: rgba(0, 0, 0, 0);
-            }
-        }
-        li:hover {
-            cursor: pointer;
-            a {
+        .nav {
+            li {
+                font-size: @title-font-size;
                 background-color: @theme-yellow-inactive;
-                color: white;
+                a {
+                    color: grey;
+                    border-color: rgba(0, 0, 0, 0);
+                }
             }
-            background-color: @theme-yellow-inactive;
-        }
-        li.active {
-            a {
-                background-color: @theme-yellow;
-                color: black;
+            li:hover {
+                cursor: pointer;
+                a {
+                    background-color: @theme-yellow-inactive;
+                    color: white;
+                }
+                background-color: @theme-yellow-inactive;
+            }
+            li.active {
+                a {
+                    background-color: @theme-yellow;
+                    color: black;
+                }
             }
         }
         .tab-content {
             padding: 10px;
             background-color: @theme-yellow;
+        }
+
+        img {
+            width: 100%;
         }
     }
 
