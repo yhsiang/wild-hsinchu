@@ -2,7 +2,10 @@
   "name": "package",
   "version": "0.0.0",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  },
   "devDependencies": {
     "autoprefixer-core": "^3.1.1",
     "browser-sync": "^1.5.4",

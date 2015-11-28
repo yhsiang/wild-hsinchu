@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp');
-var browserSync = require('browser-sync');
 
 // Load plugins
 var $ = require('gulp-load-plugins')();
@@ -24,8 +23,7 @@ gulp.task('styles', function() {
           browsers: browsers
         })
       ]))
-    .pipe(gulp.dest('build'))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(gulp.dest('build'));
 });
 
 
@@ -38,8 +36,7 @@ gulp.task('views', function(){
       pretty: true
     }))
     .on('error', $.util.log)
-    .pipe(gulp.dest('build'))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(gulp.dest('build'));
 });
 
 
@@ -58,21 +55,16 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('browser-sync', function() {
-  browserSync({
-    server: {
-      baseDir: './build'
-    }
-  });
-});
-
-
 gulp.task('watch', ['build'], function() {
   gulp.watch('src/**/*.less', ['styles']);
   gulp.watch('src/images/**/*', ['images']);
   gulp.watch('src/**/*.jade', ['views']);
 
-  gulp.start('browser-sync');
+  var connect = require('connect');
+  var serveStatic = require('serve-static');
+  connect()
+    .use(serveStatic('build'))
+    .listen(3000);
 });
 
 // JSHint grunfile.js
