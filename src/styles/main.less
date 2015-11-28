@@ -597,7 +597,24 @@ nav {
     padding: 10px 30px;
   }
 
-  .events {
+  .desc {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      p {
+        line-height: 1.9em;
+        padding-top: 15px;
+        padding-left: 60px;
+        padding-right: 60px;
+        a {
+            color: #666666;
+        }
+      }
+      background-color: white;
+  }
+
+  .events, .boxes {
       margin-top: 50px;
       margin-bottom: 50px;
       img {
@@ -605,7 +622,12 @@ nav {
           width: 100%;
       }
       img:hover {
-          border: solid 1px #666666;
+          border: solid 1px rgba(0, 0, 0, 0);
+      }
+  }
+  .boxes {
+      .row {
+          margin-top: 15px;
       }
   }
 }
