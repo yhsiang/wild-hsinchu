@@ -203,19 +203,50 @@ nav {
     padding: 10px;
     font-size: 18px;
   }
+  .services .col-md-3 {
+    padding: 0 15px;
+  }
+  .services .col-md-3.last {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+  .services .col-md-3.middle .service {
+    width: 227.5px;
+  }
   .services .service {
     height: 110px;
-    background-color: white;
+    background: none;
+    border: 2px solid #666;
     margin: 30px 0;
-    padding: 30px;
-    font-size: 24px;
-    text-align: center;
+    padding: 20px 0 20px 10px;
+    font-size: 16px;
+    color: #444;
     &:first-child {
       margin-top: 0;
     }
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  .services .service .icon img {
+    float: left;
+    width: 60px;
+    height: 60px;
+  }
+  .services .service .title {
+    padding-top: 20px;
+    padding-left: 5px;
+    text-align: right;
+    width: 110px;
+    display: inline-block;
+  }
+  .services .service .right-arrow {
+    float: right;
+    padding-top: 10px;
+  }
+  .services .service-yellow {
+    background-color: rgb( 255, 253, 209);
+    border: none;
   }
   .calendar {
     margin-top: 30px;
