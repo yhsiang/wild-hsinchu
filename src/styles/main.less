@@ -4,6 +4,7 @@
 @import (inline) "font-awesome/css/font-awesome.css";
 
 @my-navbar-height: 159px;
+@theme-yellow: #ffe023;
 
 @font-face {
   font-family: 'cwTeXHei';
@@ -22,7 +23,7 @@
 
 body {
   font-family: 'cwTeXHei', serif;
-  background-color: #ffe023;
+  background-color: @theme-yellow;
   font-size: 18px;
 }
 
@@ -166,6 +167,15 @@ main {
     color: black;
     background-color: red;
   }
+}
 
-
+#sos {
+    color: black;
+    background-color: white;
+    .slogan {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        background-color: @theme-yellow;
+    }
 }
