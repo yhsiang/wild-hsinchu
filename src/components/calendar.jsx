@@ -63,9 +63,10 @@ class Calendar extends Component {
 
 class Event extends Component {
   render() {
+    const date = moment();
     return (
       <div className="Event">
-        <div className="Event-date">104 年 11 月 28 日</div>
+        <div className="Event-date">{`${date.format('YYYY')-1911} 年 ${date.format('MM 月 DD 日')}`}</div>
         <div className="Event-header"> 活動內容
           <div className="Event-header--boder"/>
         </div>

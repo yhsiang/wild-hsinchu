@@ -23,8 +23,8 @@ if (navigator.geolocation) {
         properties: {
           title: "您所在的位置",
           'marker-size': 'large',
-          'marker-color': '#BE9A6B',
-          'marker-symbol': 'cafe'
+          'marker-color': '#FFDF26',
+          'marker-symbol': 'star'
         }
       });
       map.setView(pos, 15);
