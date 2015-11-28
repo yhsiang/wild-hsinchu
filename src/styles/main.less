@@ -21,6 +21,14 @@ body {
   background-color: #ffe023;
 }
 
+@my-max-width: 1000px;
+
+.container {
+    max-width: @my-max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 nav {
   height: 160px;
   width: 100%;
@@ -48,7 +56,7 @@ nav {
   }
   .collapse.navbar-collapse {
     width: 100%;
-    max-width: 1000px;
+    max-width: @my-max-width;
     margin: 0 auto;
   }
   ul.nav {
