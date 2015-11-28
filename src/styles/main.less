@@ -251,13 +251,13 @@ nav {
     background-color: rgb( 255, 253, 209);
     border: none;
   }
-  .calendar {
+  #calendar-container {
     margin-top: 30px;
-    height: 430px;
+    height: 460px;
     color: black;
     background-color: white;
   }
-  .calendar .Calendar {
+  #calendar-container .Calendar {
     font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
     width: 76.5%;
     float: left;
@@ -305,7 +305,11 @@ nav {
     background-color: @theme-yellow;
     border-radius: 50%;
   }
-  .calendar .Event {
+  .Calendar-grid-item.nextMonth,
+  .Calendar-grid-item.prevMonth {
+    color: #999;
+  }
+  #calendar-container .Event {
     float: right;
     background-color: #545454;
     width: 23.5%;

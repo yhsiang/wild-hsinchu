@@ -19,6 +19,7 @@ module.exports = {
   devtool: 'eval',
   entry: {
     weather: './src/components/weather.jsx',
+    calendar: './src/components/calendar.jsx'
   },
   output: {
     path: path.join(__dirname, 'build/js'),
