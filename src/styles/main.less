@@ -9,11 +9,11 @@
   font-family: 'cwTeXHei';
   font-style: normal;
   font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
-  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
-       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
-       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'),
-       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+  src: url(../fonts/cwTeXHei-zhonly.eot);
+  src: url(../fonts/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/cwTeXHei-zhonly.woff2) format('woff2'),
+       url(../fonts/cwTeXHei-zhonly.woff) format('woff'),
+       url(../fonts/cwTeXHei-zhonly.ttf) format('truetype');
 }
 
 * {
@@ -90,10 +90,10 @@ nav {
     outline: none;
   }
   ul.nav li.search .icon {
-    padding-left: 35px;
+    float: right;
   }
   .nav li a {
-    padding: 15px 0 15px 5px;
+    padding: 15px 0;
   }
 
   input {
@@ -103,11 +103,12 @@ nav {
 
 .content {
     margin: @my-navbar-height auto;
-    .container {
+    padding: 0;
+    .wrapper {
       width: 100%;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 0 0 0 5px;
+      padding: 0;
     }
 }
 
@@ -125,7 +126,9 @@ nav {
 
 main {
   margin-top: 22px;
-  background-color: #FFF;
+  .news {
+    background-color: #FFF;
+  }
   .hero-unit {
     height: 500px;
   }
