@@ -4,67 +4,7 @@ block content
   #calendar
     .content.container
       .main
-        .calendar
-          .Calendar
-            .Calendar-header -- NOV --
-              span.year 104
-            .Calendar-grid-header
-              .Calendar-grid-item 一
-              .Calendar-grid-item 二
-              .Calendar-grid-item 三
-              .Calendar-grid-item 四
-              .Calendar-grid-item 五
-              .Calendar-grid-item 六
-              .Calendar-grid-item 日
-            .Calendar-grid
-              .Calendar-grid-item 1
-              .Calendar-grid-item 2
-              .Calendar-grid-item 3
-              .Calendar-grid-item 4
-              .Calendar-grid-item 5
-              .Calendar-grid-item 6
-              .Calendar-grid-item 7
-              .Calendar-grid-item 8
-              .Calendar-grid-item 9
-              .Calendar-grid-item 10
-              .Calendar-grid-item 11
-              .Calendar-grid-item 12
-              .Calendar-grid-item 13
-              .Calendar-grid-item 14
-              .Calendar-grid-item 15
-              .Calendar-grid-item 16
-              .Calendar-grid-item 17
-              .Calendar-grid-item 18
-              .Calendar-grid-item 19
-              .Calendar-grid-item 20
-              .Calendar-grid-item 21
-              .Calendar-grid-item 22
-              .Calendar-grid-item 23
-              .Calendar-grid-item 24
-              .Calendar-grid-item 25
-              .Calendar-grid-item 26
-              .Calendar-grid-item 27
-              .Calendar-grid-item
-                span.active 28
-              .Calendar-grid-item 29
-              .Calendar-grid-item 30
-              .Calendar-grid-item
-              .Calendar-grid-item
-              .Calendar-grid-item
-              .Calendar-grid-item
-              .Calendar-grid-item
-          .Event
-            .Event-date 104 年 11 月 28 日
-            .Event-header 活動內容
-              .Event-header--boder
-            .Event-list
-              .Event-item
-                | 新竹黑客松市府官網設計大賽
-              .Event-item
-                | 「捐發票  送好康」租稅宣導活動
-              .Event-item
-                | 「新竹·漫步小旅行」1小時免費導覽服務
-
+        #calendar-container
       .desc
         div.wrapper(data-name="event1")
           h2 新竹市官網黑客松
@@ -94,4 +34,5 @@ block content
             img(src="images/box_5.jpg")
           .col-md-4
             img(src="images/box_6.jpg")
-
+block scripts
+  script(src="js/calendar.js")
