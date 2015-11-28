@@ -5,27 +5,13 @@ block content
     .content.container
       .wrapper
         #weather
-        //- .weather
-        //-   .message
-        //-     |現在是
-        //-     span.green 104
-        //-     | 年
-        //-     span.green 11
-        //-     | 月
-        //-     span.green 20
-        //-     | 日
-        //-     span.green 12:00 a.m.
-        //-     | 本日天氣
-        //-     span.green 27
-        //-     | 降雨機率
-        //-     span.green 0%
         main
           .news
             .hero-unit
               figure
                 img(src="images/1448609123711pic1.jpg")
                 figcaption
-                  金山社區日間托老、共餐食堂開幕林智堅市長:落實長者照顧 友善服務到社區
+                  |金山社區日間托老、共餐食堂開幕林智堅市長:落實長者照顧 友善服務到社區
               section
                 .text
                   p 因應高齡化社會來臨，新竹市政府積極推動「在地老化、就近照顧」的老人福利政策，市長林智堅上任後新增關東、三民2個社區照顧懷據點，目前達31處，並新設4個長青共餐食堂，今(27)日新竹市第二個日間托老服務中心，於金山社區關懷據點舉行開幕儀式，並設置長青樂活健康食堂，林智堅市長表示，希望將照顧長者的服務社區化，讓長輩在最熟悉的環境，得到最友善的照顧服務。
@@ -138,8 +124,10 @@ block content
                   | 「捐發票  送好康」租稅宣導活動
                 .Event-item
                   | 「新竹·漫步小旅行」1小時免費導覽服務
-
           .opendata
-            | this is opendata block
+            #map
+            ul#marker-list
+
 block scripts
   script(src="js/weather.js")
+  script(src="js/map.js")

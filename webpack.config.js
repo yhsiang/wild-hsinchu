@@ -18,7 +18,7 @@ else {
 module.exports = {
   devtool: 'eval',
   entry: {
-    weather: './src/components/weather.jsx'
+    weather: './src/components/weather.jsx',
   },
   output: {
     path: path.join(__dirname, 'build/js'),
