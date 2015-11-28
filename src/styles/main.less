@@ -19,6 +19,7 @@
 body {
   font-family: 'cwTeXHei', serif;
   background-color: #ffe023;
+  font-size: 18px;
 }
 
 nav {
@@ -85,9 +86,47 @@ nav {
 }
 
 .content {
-    margin-top: @my-navbar-height;
+    margin: @my-navbar-height auto;
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 0 0 5px;
+    }
 }
 
 .weather {
   height: 65px;
+  margin-top: 22px;
+  background-color: #FFF;
+  .message {
+    padding: 20px 0 20px 35px;
+  }
+  .green {
+    color: rgb(0, 189, 212);
+  }
+}
+
+main {
+  margin-top: 22px;
+  background-color: #FFF;
+  height: 600px;
+  .hero-unit {
+    height: 500px;
+  }
+  .hero-unit .left-panel {
+    width: 70%;
+  }
+  .hero-unit .left-panel img {
+    width: 100%;
+    float: left;
+  }
+  .hero-unit .right-panel {
+    float: right;
+    width: 30%;
+  }
+  .thumbs {
+    float: none;
+    height: 100px;
+  }
 }
