@@ -28,14 +28,15 @@ body {
 
 #index {
   background-color: @theme-yellow;
+  height: 100%;
 }
 
 @my-max-width: 1000px;
 
 .container {
-    max-width: @my-max-width;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: @my-max-width;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 nav {
@@ -107,7 +108,8 @@ nav {
 }
 
 .content {
-    margin: @my-navbar-height auto;
+    margin-top: @my-navbar-height;
+    margin-bottom: 20px;
     padding: 0;
     .wrapper {
       width: 100%;
@@ -217,15 +219,15 @@ nav {
   }
   .calendar {
     margin-top: 30px;
-    height: 300px;
+    height: 400px;
     color: black;
-    background-color: red;
+    background-color: white;
   }
   .opendata {
     margin-top: 30px;
-    height: 300px;
+    height: 400px;
     color: black;
-    background-color: red;
+    background-color: white;
   }
 }
 
