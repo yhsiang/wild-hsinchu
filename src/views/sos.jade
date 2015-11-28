@@ -1,7 +1,44 @@
 extends layout
 
 block content
-  #sos.guide
+  #sos
     .content.container
       .slogan 需要幫忙嗎？
+      .guide.rows
+        .col-md-3
+          .dropdown
+            button.btn.btn-default.dropdown-toggle(type="button" id="menu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") 需要投訴
+            ul.dropdown-menu(aria-labelledby="menu1")
+              li
+                a AAAAA
+              li
+                a BBBBB
+          .dropdown
+            button.btn.btn-default.dropdown-toggle(type="button" id="menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") 申請文件
+            ul.dropdown-menu(aria-labelledby="menu2")
+              li
+                a CCCC
+              li
+                a DDDD
+          .dropdown
+            button.btn.btn-default.dropdown-toggle(type="button" id="menu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") 尋找管道
+            ul.dropdown-menu(aria-labelledby="menu3")
+              li
+                a EEEE
+              li
+                a FFFF
+          .dropdown
+            button.btn.btn-default.dropdown-toggle(type="button" id="menu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") 繳納規費
+            ul.dropdown-menu(aria-labelledby="menu4")
+              li
+                a GGG
+              li
+                a HHH
+        .col-md-9
+          .faq
+            h3 常見問題
+            ul
+              li 調解行政：請問新竹市免費法律諮詢的時間、聯絡電話？
+              li 新竹市衛生局 104 年度「高齡友善固齒整合照顧計畫」 QA 問答集
+              li 新竹市復康巴士訂車方法
 
