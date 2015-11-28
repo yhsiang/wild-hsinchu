@@ -4,7 +4,10 @@
 @import (inline) "font-awesome/css/font-awesome.css";
 
 @my-navbar-height: 159px;
+@service-green: rgb(57, 160, 48);
 @theme-yellow: #ffe023;
+@theme-yellow-inactive: rgba(210, 180, 0, 1);
+@title-font-size: 24px;
 
 @font-face {
   font-family: 'cwTeXHei';
@@ -191,7 +194,7 @@ nav {
   .services .quick-service {
     height: 390px;
     color: white;
-    background-color: rgb(57, 160, 48);
+    background-color: @service-green;
     padding: 20px 30px;
   }
   .services .quick-service .title {
@@ -342,7 +345,7 @@ nav {
 
 #sos {
     color: black;
-    background-color: white;
+    background: #FFF url(/images/back_1999.png) no-repeat center center fixed;
     .slogan {
         margin-top: 50px;
         padding-top: 15px;
@@ -354,11 +357,16 @@ nav {
 
     .guide {
         margin-top: 15px;
+        margin-bottom: 50px;
         .dropdown {
             .btn {
+                background-color: @service-green;
+                color: white;
                 margin-top: 10px;
                 width: 100%;
                 text-align: left;
+                border-radius: 0px;
+                font-size: 1.01em;
             }
             ul {
                 width: 100%;
@@ -367,7 +375,102 @@ nav {
         .faq {
             padding: 20px;
             font-size: 1em;
-            background-color: rgba(255, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.3);
+            ul {
+                padding-left: 0px;
+            }
+            li {
+                list-style: none;
+            }
+        }
+
+        #close {
+            float:right;
+            position: absolute;
+            right: 15px;
+            cursor: pointer;
+        }
+    }
+
+    .answer {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: @theme-yellow;
+        float: left;
+        position: absolute;
+        width: 80%;
+        top: 10px;
+        left: -14px;
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            background-color: white;
+        }
+        table {
+            margin-top: 10px;
+        }
+        .symbol {
+            text-align: center;
+            font-size: 2em;
+            width: 50px;
+            color: @theme-yellow;
+            background-color: #666465;
+            margin-bottom: 5px;
+        }
+        .desc {
+            padding: 10px;
+        }
+    }
+
+    .tabs {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        li {
+            font-size: @title-font-size;
+            background-color: @theme-yellow-inactive;
+            a {
+                color: grey;
+                border-color: rgba(0, 0, 0, 0);
+            }
+        }
+        li:hover {
+            cursor: pointer;
+            a {
+                background-color: @theme-yellow-inactive;
+                color: white;
+            }
+            background-color: @theme-yellow-inactive;
+        }
+        li.active {
+            a {
+                background-color: @theme-yellow;
+                color: black;
+            }
+        }
+        .tab-content {
+            padding: 10px;
+            background-color: @theme-yellow;
+        }
+    }
+
+    .links {
+        .item {
+            padding: 10px;
+        }
+        .item:hover {
+            cursor: pointer;
+        }
+        .linktext {
+            line-height: 90px;
+            height: 90px;
+            text-align: center;
+            background-color: #00a0ea;
+        }
+        .facebook {
+            color: white;
+            font-size: 2em;
+            background-color: #2a579b;
         }
     }
 }

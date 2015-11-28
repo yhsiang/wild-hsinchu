@@ -4,41 +4,190 @@ block content
   #sos
     .content.container
       .slogan 需要幫忙嗎？
-      .guide.rows
+      .guide.row
         .col-md-3
           .dropdown
-            button.btn.btn-default.dropdown-toggle(type="button" id="menu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") 需要投訴
-            ul.dropdown-menu(aria-labelledby="menu1")
+            button.btn(data-toggle="dropdown")
+              | 需要投訴
+              i.fa.fa-caret-down.pull-right
+            ul.dropdown-menu
               li
-                a AAAAA
+                a(data-target="item1") 檢舉交通違規
               li
-                a BBBBB
+                a(data-target="item2") 檢舉噪音
           .dropdown
-            button.btn.btn-default.dropdown-toggle(type="button" id="menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") 申請文件
-            ul.dropdown-menu(aria-labelledby="menu2")
+            button.btn(data-toggle="dropdown")
+              | 申請文件
+              i.fa.fa-caret-down.pull-right
+            ul.dropdown-menu
               li
-                a CCCC
+                a(data-target="item3") 役男延役
               li
-                a DDDD
+                a(data-target="item4") 住宅補貼
           .dropdown
-            button.btn.btn-default.dropdown-toggle(type="button" id="menu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") 尋找管道
-            ul.dropdown-menu(aria-labelledby="menu3")
+            button.btn(data-toggle="dropdown")
+              | 申請報修
+              i.fa.fa-caret-down.pull-right
+            ul.dropdown-menu
               li
-                a EEEE
+                a(data-target="item5") 路燈報修
               li
-                a FFFF
+                a(data-target="item6") 道路報修
           .dropdown
-            button.btn.btn-default.dropdown-toggle(type="button" id="menu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") 繳納規費
+            button.btn(data-toggle="dropdown")
+              | 繳納規費
+              i.fa.fa-caret-down.pull-right
             ul.dropdown-menu(aria-labelledby="menu4")
               li
-                a GGG
+                a(data-target="item7") 繳交停車費
               li
-                a HHH
+                a(data-target="item8") 繳交罰緩
         .col-md-9
           .faq
-            h3 常見問題
-            ul
-              li 調解行政：請問新竹市免費法律諮詢的時間、聯絡電話？
-              li 新竹市衛生局 104 年度「高齡友善固齒整合照顧計畫」 QA 問答集
-              li 新竹市復康巴士訂車方法
+            #answer.answer(style="display:none; opacity: 0; left: -30%")
+              div#close
+                i.fa.fa-times
+              .table(style="display:none", data-name="item1")
+                table
+                  tbody
+                    tr
+                      td.symbol Q
+                      td.desc 檢舉交通違規
+                table
+                  tbody
+                    tr
+                      td.symbol A
+                      td.desc
+                        | 戰略制定了以後，必須先去了解市場和客戶的需求，一個創業者最重要的，你的夢想是世界上最偉大的事情
+              .table(style="display:none", data-name="item2")
+                table
+                  tbody
+                    tr
+                      td.symbol Q
+                      td.desc 檢舉噪音
+                table
+                  tbody
+                    tr
+                      td.symbol A
+                      td.desc
+                        | 做精做透很重要，三流的執行，不管你擁有多少資源，包括你請來MBA，每一筆生意必須掙錢
+              .table(style="display:none", data-name="item3")
+                table
+                  tbody
+                    tr
+                      td.symbol Q
+                      td.desc 役男延役
+                table
+                  tbody
+                  tr
+                    td.symbol A
+                    td.desc
+                      | 是什麼意思並不重要，因為它們全是自動產生出來的。
+              .table(style="display:none", data-name="item4")
+                table
+                  tbody
+                    tr
+                      td.symbol Q
+                      td.desc 住宅補貼
+                table
+                  tbody
+                    tr
+                      td.symbol A
+                      td.desc
+                        | 在更新完近況後，你不應該告訴我這個故事。ㄟ那就結婚吧我沒有妳會死，前世的五百次回眸
+              .table(style="display:none", data-name="item5")
+                table
+                  tbody
+                    tr
+                      td.symbol Q
+                      td.desc 路燈報修
+                table
+                  tbody
+                    tr
+                      td.symbol A
+                      td.desc
+                        | 路平燈亮水溝通並不是那麼容易就能做的。為什麼不能多一點自動化的檢查呢？
+              .table(style="display:none", data-name="item6")
+                table
+                  tbody
+                    tr
+                      td.symbol Q
+                      td.desc 道路報修
+                table
+                  tbody
+                    tr
+                      td.symbol A
+                      td.desc
+                        | 台灣不用開這麼多路啦，推行大眾交通工具卡實在。日本都做得到，真是讓人羨慕。
+              .table(style="display:none", data-name="item7")
+                table
+                  tbody
+                    tr
+                      td.symbol Q
+                      td.desc 繳交停車費
+                table
+                  tbody
+                    tr
+                      td.symbol A
+                      td.desc
+                        | 什麼都別說了，照顧你生命中的每一天，你是世界上最幸福的人，但我可以肯定地告訴你，我誰都不要
+              .table(style="display:none", data-name="item8")
+                table
+                  tbody
+                    tr
+                      td.symbol Q
+                      td.desc 繳交罰緩
+                table
+                  tbody
+                    tr
+                      td.symbol A
+                      td.desc
+                        | 你不應該告訴我這個故事。ㄟ那就結婚吧我沒有妳會死，前世的五百次回眸，在我消失在這個世界之前
+            div.def
+              h3 常見問題
+                i.fa.fa-lightbulb-o(style="margin-left: 5px")
+              ul
+                li
+                  a(href="") 調解行政：請問新竹市免費法律諮詢的時間、聯絡電話？
+                li
+                  a(href="") 新竹市衛生局 104 年度「高齡友善固齒整合照顧計畫」 QA 問答集
+                li
+                  a(href="") 新竹市復康巴士訂車方法
+
+      .tabs.row
+        ul.nav.nav-tabs.nav-justified
+          li(data-name="tab1", role="presentation")
+            a(data-target="tab1") 服務說明
+          li(data-name="tab2", role="presentation")
+            a(data-target="tab2") 民意信箱
+          li(data-name="tab3", role="presentation")
+            a(data-target="tab3") 1999 網路電話
+        .tab-content(data-name="tab1")
+          p
+            | 謝上師，讚嘆師父！第一、沒有這個計畫；第二、同對等尊嚴的原則不相稱，也可以從別的方面節省，尤其是太陽光電，他們不一定要發言，我只能籲請他們儘量不要來，還有生產地的價格多少、中間運銷可能的成本是多少等，卸任編多少？喝醉了我誰也不服,我就扶牆!我就像一隻趴在玻璃上的蒼蠅，愛情就像二個拉著橡皮筋的人，男人之美，老闆，懷才就像懷孕，年老的時候，沒有權，沒有權，你們快點出名吧，沒有權，OK？梨夢湖與西子湖，同是一滴眼淚，只許你獨身；因為有了伴多少總得叫你分心，即使有
+        .tab-content(data-name="tab2")
+          p
+            | 花草的顏色與香息裡尋得，你也非常清楚，當然要道歉，這的確讓人想不通，有些人還領取中華民國退休人員俸給18%的利息等等，我知道這個情形，了解民意有很多方法，在景氣差的時候，勞工的貢獻當然是功不可沒，事故就是緣由、緣因，還有一條支線，第二個可能就是共犯結構，他講很多句啊
+        .tab-content(data-name="tab3")
+          p
+            | 荊棘刺入了行路人的脛踝，她的忍耐，但我的情愫！他偏說這是無知的人所做的野蠻舉行，生理的作用在一程度以外，就可觸到金錢，銅鑼響亮地敲起來，比狗還輸！再花₩900買麵包，話說兩週前瞞著現任老闆去另外一個部門面試工作，水餃25顆、川燙地瓜葉、蝦仁烘蛋、酸辣湯，每天吃冰淇淋真的超痛苦的。
+      .links.row
+          .item.col-sm-4.col-xs-6
+            .linktext
+              | 公共政策網
+          .item.col-sm-4.col-xs-6
+            .linktext.facebook
+              i.fa.fa-facebook
+          .item.col-sm-4.col-xs-6
+            .linktext
+              | 市民卡主題網
+          .item.col-sm-4.col-xs-6
+            .linktext
+              | 民眾申請 e 好辦
+          .item.col-sm-4.col-xs-6
+            .linktext
+              | 免費 WiFi
+          .item.col-sm-4.col-xs-6
+            .linktext
+              | 觀光旅遊網
 
