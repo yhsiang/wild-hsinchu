@@ -24,7 +24,10 @@ nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
         li
           a(href='/sos.html') 1999
         li.search
-          input(placeholder="搜尋")
-          span.icon
-            i.fa.fa-search
+          form(action="http://search.hccg.gov.tw/cgi-bin/search/query.cgi", method="get", target="new")
+            input(name="dbs" value="www-hccg" type="hidden")
+            input(name="uilang" value="" type="hidden")
+            input#searchInput(placeholder="搜尋", name="q")
+            span.icon
+              i.fa.fa-search
 // Navbar End
