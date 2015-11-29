@@ -285,13 +285,15 @@ nav {
     .guide {
         margin-top: 15px;
         margin-bottom: 50px;
+        .dropdown:not(:first-child){
+            margin-top: 10px;
+        }
         .dropdown {
             .btn {
                 height: 45px;
                 font-size: 20px;
                 background-color: @service-green;
                 color: white;
-                margin-top: 10px;
                 width: 100%;
                 text-align: left;
                 border-radius: 0px;
@@ -306,6 +308,7 @@ nav {
             }
         }
         .faq {
+            min-height: 210px;
             padding: 20px;
             font-size: 1em;
             background-color: rgba(255, 255, 255, 0.3);
@@ -313,6 +316,7 @@ nav {
                 padding-left: 0px;
             }
             li {
+                margin-top: 5px;
                 list-style: none;
             }
         }
