@@ -8,6 +8,7 @@
 @theme-yellow: #ffe023;
 @theme-yellow-inactive: rgba(210, 180, 0, 1);
 @title-font-size: 24px;
+@normal-font: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
 
 @font-face {
   font-family: 'cwTeXHei';
@@ -127,10 +128,18 @@ nav {
   margin-top: 22px;
   background-color: #FFF;
   .message {
-    padding: 20px 0 20px 35px;
+    padding: 10px 0 20px 35px;
+    font-family: @normal-font;
+    text-align: center;
+    letter-spacing: 10px;
   }
   .green {
     color: rgb(0, 189, 212);
+  }
+  .color {
+    color: rgb(0, 189, 212);
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 

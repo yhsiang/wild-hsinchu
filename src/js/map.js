@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log('tete');
   L.mapbox.accessToken = 'pk.eyJ1IjoieWhzaWFuZyIsImEiOiJjaWhqMGw3ZncwNWVydGpqN2l2ajd1bnhoIn0.WSZZfcBqvSbGgtQAZK5UPw';
   var map = L.mapbox.map('map', 'mapbox.comic')
       .setView([24.8047222, 120.9713889], 15);
