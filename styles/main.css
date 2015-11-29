@@ -9020,19 +9020,19 @@ nav {
   background-color: #FFFEFC;
 }
 nav .container {
-  padding: 35px 0 0 0;
+  padding: 12px 0 0 0;
   height: 100%;
 }
 nav .logo {
   display: block;
   width: 300px;
-  height: 71px;
+  height: 93px;
   margin: 0 auto;
 }
 nav .logo a {
   padding: 0;
   width: 300px;
-  height: 71px;
+  height: 93px;
 }
 nav .logo a img {
   width: 100%;
@@ -9289,7 +9289,7 @@ nav input {
   float: left;
   position: absolute;
   width: 80%;
-  top: 10px;
+  top: 0px;
   left: -14px;
 }
 #sos .answer table {
