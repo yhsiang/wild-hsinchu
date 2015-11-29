@@ -95,6 +95,8 @@ class Event extends Component {
   triggerUpdate(event) {
     if (window.updateDetail) {
       window.updateDetail(event);
+    } else {
+      window.open(window.location.href.replace('#','calendar.html'));
     }
   }
   renderItem() {
