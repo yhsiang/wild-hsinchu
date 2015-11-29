@@ -9,6 +9,9 @@
 @theme-yellow-inactive: rgba(210, 180, 0, 1);
 @title-font-size: 24px;
 @normal-font: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
+@my-grey: #545454;
+
+@mapHeight: 400px;
 
 @font-face {
   font-family: 'cwTeXHei';
@@ -480,7 +483,7 @@ nav {
   }
   .calendar .Event {
     float: right;
-    background-color: #545454;
+    background-color: @my-grey;
     width: 23.5%;
     height: 100%;
   }
@@ -630,7 +633,7 @@ nav {
 }
 #calendar-container .Event {
   float: right;
-  background-color: #545454;
+  background-color: @my-grey;
   width: 23.5%;
   height: 100%;
 }
@@ -670,11 +673,11 @@ nav {
 .calendar-popup-wrapper {
   height: 200px;
   width: 400px;
-  background-color: #545454;
+  background-color: @my-grey;
 }
 .opendata {
   margin-top: 30px;
-  height: 400px;
+  height: @mapHeight;
   color: black;
   background-color: white;
   position: relative;
@@ -691,7 +694,7 @@ nav {
     width: 23.5%;
     bottom:0;
     overflow-x:auto;
-    background-color: #545454;
+    background-color: @my-grey;
     margin:0;
     padding:5px;
   }
@@ -710,4 +713,12 @@ nav {
     height: 28px;
     margin-right: 10px;
   }
+}
+
+#maps {
+    .mapcontainer {
+        width: 100%;
+        height: @mapHeight;
+        background-color: @my-grey;
+    }
 }
