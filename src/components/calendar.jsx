@@ -3,7 +3,10 @@ import { render } from 'react-dom';
 import moment from 'moment';
 import createDateObjects from './createDateObjects';
 import { map } from 'lodash';
+import $ from '../js/jquery';
 import 'moment/locale/nb';
+
+const url = 'https://hsinchu.herokuapp.com/events';
 
 class Calendar extends Component {
 
@@ -21,9 +24,36 @@ class Calendar extends Component {
     renderDay: day => day.format('YYYY-MM-D'),
   }
 
+  state = {
+    is_show: false
+  }
+  openPopup() {
+    this.setState({ is_show: true });
+  }
+  closePopup() {
+    this.setState({ is_show: false });
+  }
+  renderPopup() {
+    return (
+      <div className="calendar-popup-pane">
+        <div className="calendar-popup-wrapper">
+          <div className="calendar-popup-content">
+            Hi !!!!
+            <span onClick={this.closePopup.bind(this)}>x</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
   render() {
     const { date, weekOffset, renderDay, onNextMonth, onPrevMonth, onPickDate } = this.props,
-      renderToday = day => <span className="active">{day.format('D')}</span>;
+      renderToday = day => {
+        return (
+          <span className="active">
+            {day.format('D')}
+          </span>
+        );
+      };
 
     return (
       <div className='Calendar'>
@@ -49,7 +79,7 @@ class Calendar extends Component {
               <div
                 key={`day-${i}`}
                 className={`Calendar-grid-item ${day.classNames || ''}`}
-                onClick={(e) => onPickDate(day.day)}
+                onClick={(e) => onPickDate(day.day) }
               >
                 { (moment().format('M-D') === day.day.format('M-D'))? renderToday(day.day):renderDay(day.day)}
               </div>
@@ -62,6 +92,26 @@ class Calendar extends Component {
 }
 
 class Event extends Component {
+  triggerUpdate(event) {
+    if (window.updateDetail) {
+      window.updateDetail(event);
+    }
+  }
+  renderItem() {
+    return (
+      map(this.props.events.slice(0,3), (e) => {
+        return (
+          <div
+            className="Event-item"
+            key={e.title}
+            onClick={this.triggerUpdate.bind(this, e)}
+          >
+            {e.title}
+          </div>
+        );
+      })
+    );
+  }
   render() {
     const date = moment();
     return (
@@ -71,12 +121,7 @@ class Event extends Component {
           <div className="Event-header--boder"/>
         </div>
         <div className="Event-list">
-          <div className="Event-item">新竹黑客松市府官網設計大賽
-          </div>
-          <div className="Event-item">「捐發票  送好康」租稅宣導活動
-          </div>
-          <div className="Event-item">「新竹·漫步小旅行」1小時免費導覽服務
-          </div>
+          {this.renderItem()}
         </div>
       </div>
     );
@@ -84,9 +129,14 @@ class Event extends Component {
 }
 class MyCalendar extends Component {
   state = {
-    date: moment()
+    date: moment(),
+    events: []
   }
-
+  componentWillMount() {
+    $.ajax(url).then((it) =>{
+      this.setState({ events: it.results });
+    });
+  }
   render() {
     return (
       <div style={{height: 100 + '%'}}>
@@ -94,10 +144,10 @@ class MyCalendar extends Component {
           onNextMonth={() => this.setState({ date: this.state.date.clone().add(1, 'months') }) }
           onPrevMonth={() => this.setState({ date: this.state.date.clone().subtract(1, 'months') }) }
           date={this.state.date}
-          onPickDate={(date) => console.log(date)}
+          onPickDate= {(day) => console.log(day)}
           renderDay={(day) => day.format('D')}
         />
-        <Event />
+        <Event events={this.state.events}/>
       </div>
     );
   }

@@ -11,7 +11,7 @@ $(function () {
     //    }
     //}, 3000);
 
-    function updateDetail (data) {
+    window.updateDetail = function (data) {
         var detail = document.querySelector('#detail');
         if (!!$ && !!detail) {
             $(detail).trigger('detail', [data]);

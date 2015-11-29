@@ -463,6 +463,7 @@ nav {
     width: 25px;
     background-color: @theme-yellow;
     border-radius: 50%;
+    cursor: pointer;
   }
   .calendar .Event {
     float: right;
@@ -554,6 +555,7 @@ nav {
 }
 
 #calendar-container {
+  position: relative;
   margin-top: 30px;
   height: 460px;
   color: black;
@@ -593,6 +595,7 @@ nav {
   color: #666;
 }
 .Calendar-grid-item {
+  position: relative;
   flex: 0 14.28571%;
   text-align: center;
   padding: 1rem;
@@ -606,6 +609,7 @@ nav {
   width: 25px;
   background-color: @theme-yellow;
   border-radius: 50%;
+  cursor: pointer;
 }
 .Calendar-grid-item.nextMonth,
 .Calendar-grid-item.prevMonth {
@@ -644,6 +648,16 @@ nav {
 }
 .Event-item:hover {
   background: rgba(255, 255, 255, 0.5);
+}
+.calendar-popup-pane {
+  position: absolute;
+  top: -150px;
+  left: -400px;
+}
+.calendar-popup-wrapper {
+  height: 200px;
+  width: 400px;
+  background-color: #545454;
 }
 .opendata {
   margin-top: 30px;
