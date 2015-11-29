@@ -60,6 +60,11 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
+gulp.task('cname', function() {
+  return gulp.src('CNAME')
+    .pipe(gulp.dest('build'));
+});
+
 gulp.task('watch', ['build'], function() {
   gulp.watch('src/**/*.less', ['styles']);
   gulp.watch('src/images/**/*', ['images']);
@@ -99,7 +104,7 @@ gulp.task('clean', function(cb) {
 });
 
 
-gulp.task('build', ['styles', 'views', 'images', 'fonts', 'scripts', 'webpack']);
+gulp.task('build', ['styles', 'views', 'images', 'fonts', 'scripts', 'webpack', 'cname']);
 
 
 gulp.task('default', ['clean'], function() {
