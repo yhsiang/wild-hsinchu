@@ -4,5 +4,18 @@ block content
   #maps
     .content.container
       .main
-        | This is maps page
+        .dropdown
+          button.center-block.btn(data-toggle="dropdown")
+            | 選擇功能
+            i.fa.fa-caret-down.pull-right
+          ul.dropdown-menu
+            li 近期施工地點
+            li 本日親子活動
+        .mapcontainer
+          .opendata
+            #map
+            ul#marker-list
 
+block scripts
+  script(src="https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.js")
+  script(src="js/map.js")
